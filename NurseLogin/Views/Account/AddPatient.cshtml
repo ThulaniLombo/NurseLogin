@@ -1,0 +1,195 @@
+﻿@using NurseLogin.ViewModels;
+@model PatientVM;
+
+@{
+	ViewData["Title"] = "AddPatient";
+}
+
+<div class="row d-flex align-items-center justify-content-center">
+	<h2 class="text-center text-info">Patient Admission</h2>
+	<div class="col-md-12 card p-3">		
+		
+		<form asp-action="" >
+			<h4>Admission Details</h4>
+			@* <div asp-validation-summary="ModelOnly" class="text-danger"></div> *@
+			<div class="row">
+			<div class="col-md-3 mb-1">
+				<label class="control-label">Admission Date</label>
+					<input class="form-control" type="date" />
+			</div>
+			<div class="col-md-3 mb-1">
+				<label class="control-label">First Name</label>
+				<input class="form-control" placeholder="Mark" />
+			</div>
+
+				<div class="col-md-3 mb-1">
+				<label class="control-label">Last Name</label>
+				<input class="form-control" placeholder="Otto" />
+			</div>
+
+			@* 	<div class="col-md-3 mb-1">
+					<label class="control-label">Admission Date</label>
+					<input class="form-control" type="date" />
+				</div> *@
+
+				<div class="col-md-3 mb-1">
+				<label class="control-label">ID Number</label>
+				<input class="form-control" placeholder="8905091846087" />
+			</div>
+			</div>
+
+			@* row 2 *@
+			<div class="row">
+				<div class="col-md-3 mb-1">
+				<label class="control-label">Phone Number</label>
+				<input class="form-control" />
+			</div>
+
+				<div class="col-md-3 mb-1">
+				<label class="control-label">Physical Address</label>
+				<input class="form-control" />
+			</div>
+
+				<div class="col-md-3 mb-1">
+				<label class="control-label">Ward</label>
+				<input class="form-control" />
+			</div>
+
+				<div class="col-md-3 mb-1">
+				<label class="control-label">Bed</label>
+				<input class="form-control" />
+			</div>
+			</div>
+			<strong><hr /></strong>
+
+			<div class="row">
+				<h4>Allergies</h4>
+				<div class="col-md-4 mb-1">
+					<label class="control-label">Allergy Type</label>
+					<select class="form-select" aria-label="Default select example">
+						<option selected>Select Alergy</option>
+						<option value="1"> Food alergy</option>
+						<option value="2"> Food alergy</option>
+					</select>
+				</div>
+
+				<div class="col-md-4 mb-1">
+					<label class="control-label">Allergen</label>
+					<input class="form-control" />
+				</div>
+
+				<div class="col-md-4 mb-1">
+					<label class="control-label">Reaction</label>
+					<input class="form-control" />
+				</div>
+			</div>
+			<strong><hr /></strong>
+
+			<div class="row">
+			<h4>Conditions</h4>
+				<div class="col-md-4 mb-1">
+				<label class="control-label">Condition Name</label>
+				<input class="form-control" />
+			</div>
+
+			@* <div class="mb-1">
+				<label class="control-label">Allergen</label>
+				<input class="form-control" />
+			</div>
+
+			<div class="mb-1">
+				<label class="control-label">Reaction</label>
+				<input class="form-control" />
+			</div> *@
+			</div>
+			<strong><hr /></strong>
+
+			<div class="row">
+			<h4>Current Medication</h4>
+				<div class="col-md-4 mb-1">
+				<label class="control-label">Medicine</label>
+				<input class="form-control" />
+			</div>
+
+				<div class="col-md-4 mb-1">
+				<label class="control-label">Dosage</label>
+				<input class="form-control" />
+			</div>
+
+				<div class="col-md-4 mb-1">
+				<label class="control-label">Frequency</label>
+				<input class="form-control" />
+			</div>
+
+				<div class="col-md-4 mb-1">
+				<label class="control-label">Food Relation</label>
+				<input class="form-control" />
+			</div>
+
+				<div class="col-md-4 mb-1">
+				<label class="control-label">Route</label>
+				<input class="form-control" />
+			</div>
+			</div>
+			<strong><hr /></strong>
+
+			<div class="row">
+			<h4>Vitals</h4>
+				<div class="col-md-3 mb-1">
+				<label class="control-label">Weight</label>
+				<input class="form-control" />
+			</div>
+
+				<div class="col-md-3 mb-1">
+				<label class="control-label">Height</label>
+				<input class="form-control" />
+			</div>
+
+			<div class="col-md-3 mb-1">
+				<label class="control-label">Temperature</label>
+				<input class="form-control" />
+			</div>
+
+			<div class="col-md-3 mb-1">
+				<label class="control-label">Blood Pressure</label>
+				<input class="form-control" />
+			</div>
+
+			<div class="col-md-3 mb-1">
+				<label class="control-label">Pulse Rate</label>
+				<input class="form-control" />
+			</div>
+
+			<div class="col-md-3 mb-1">
+				<label class="control-label">Respiratory Rate</label>
+				<input class="form-control" />
+			</div>
+
+				<div class="col-md-3 mb-1">
+				<label class="control-label">Blood Oxygen</label>
+				<input class="form-control" />
+			</div>
+
+				<div class="col-md-3 mb-1">
+				<label class="control-label">Blood Glucose Level</label>
+				<input class="form-control" />
+			</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-4 mt-3">
+					<input type="submit" value="Admit Patient" class="btn-outline-primary btn-sm float-end" />
+				</div>
+			</div>
+		</form>
+
+	</div>
+</div>
+
+@* Client side validation *@
+
+@section Scripts {
+	@{
+		await Html.RenderPartialAsync("_ValidationScriptsPartial");
+	}
+}

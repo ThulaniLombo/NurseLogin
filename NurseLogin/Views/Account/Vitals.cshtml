@@ -1,0 +1,82 @@
+﻿@{
+	ViewData["Title"] = "Vitals";
+}
+
+<div class="row d-flex align-items-center justify-content-center">
+	<div class="col-md-2 p-3">
+		<p>Sidebar menu</p>
+
+	</div>
+
+
+	<div class="col-md-10 card p-3">
+		<h2 class="text-center text-info">Vitals</h2>
+		<form asp-action="">
+			<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+			<div class="row">
+				<div class="col-md-3 mb-1">
+				<label  class="control-label">Weight</label>
+				<input  class="form-control" />
+				@* <span asp-validation-for="PatientName" class="text-danger"></span> *@
+			</div>
+
+			<div class="col-md-3 mb-1">
+				<label class="control-label">Height</label>
+				<input class="form-control" />
+				@* <span asp-validation-for="PatientName" class="text-danger"></span> *@
+			</div>
+
+			<div class="col-md-3 mb-1">
+				<label class="control-label">Temperature</label>
+				<input class="form-control" />
+				@* <span asp-validation-for="PatientName" class="text-danger"></span> *@
+			</div>
+
+			<div class="col-md-3 mb-1">
+				<label  class="control-label">Blood Pressure</label>
+				<input  class="form-control" />
+				@* <span asp-validation-for="PatientName" class="text-danger"></span> *@
+			</div>
+
+				<div class="col-md-3 mb-1">
+				<label class="control-label">Pulse Rate</label>
+				<input class="form-control" />
+				@* <span asp-validation-for="PatientName" class="text-danger"></span> *@
+			</div>
+
+				<div class="col-md-3 mb-1">
+				<label class="control-label">Respiratory Rate</label>
+				<input class="form-control" />
+				@* <span asp-validation-for="PatientName" class="text-danger"></span> *@
+			</div>
+
+				<div class="col-md-3 mb-1">
+				<label class="control-label">Blood Oxygen</label>
+				<input class="form-control" />
+				@* <span asp-validation-for="PatientName" class="text-danger"></span> *@
+			</div>
+
+				<div class="col-md-3 mb-1">
+				<label class="control-label">Blood Glucose Level</label>
+				<input class="form-control" />
+				@* <span asp-validation-for="PatientName" class="text-danger"></span> *@
+			</div>
+			</div>
+			<div class="row">
+				<div class="col-4 mt-2" >
+					<input type="submit" value="Update Patient Vitals" class="btn-outline-primary btn-sm float-end" />
+				</div>
+			</div>
+
+		</form>
+
+	</div>
+</div>
+
+@* Client side validation *@
+
+@section Scripts {
+	@{
+		await Html.RenderPartialAsync("_ValidationScriptsPartial");
+	}
+}

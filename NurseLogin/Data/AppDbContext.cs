@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using NurseLogin.Models;
+using NurseLogin.ViewModels;
 
 namespace NurseLogin.Data
 {
@@ -11,5 +12,7 @@ namespace NurseLogin.Data
         {
             
         }
+
+        //public DbSet<PatientVM> Patients { get; set; }
     }
 }

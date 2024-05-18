@@ -56,7 +56,7 @@ namespace NurseLogin.Controllers
                 AppUser user = new()
                 {
                     Name = model.Name,
-                    UserName = model.Email,
+                    UserName = model.Name,
                     Email = model.Email,
                     Address = model.Address
                 };
@@ -79,6 +79,15 @@ namespace NurseLogin.Controllers
 			return View();
 		}
 
+		public IActionResult AddPatient()
+		{
+			return View();
+		}
+
+		public IActionResult Vitals()
+		{
+			return View();
+		}
 		public async Task<IActionResult> Logout()
         {
             await signInManager.SignOutAsync();
